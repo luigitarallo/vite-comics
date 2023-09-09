@@ -7,7 +7,15 @@ export default {
 };
 </script>
 
-<template></template>
+<template>
+  <div class="wrapper">
+    <nav class="debug">
+      <div class="container debug">
+        <AppHeader />
+      </div>
+    </nav>
+  </div>
+</template>
 
 <style lang="scss">
 @use "./styles/general.scss" as *;
