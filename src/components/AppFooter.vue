@@ -74,59 +74,59 @@ export default {
 </script>
 <template>
   <footer>
-    <div></div>
-    <div class="footer-site-links">
+    <!-- FOOTER SITE INDEX -->
+    <div class="footer-site-index">
       <div class="container">
-        <div class="site-links-lists">
-          <div class="col-1-link">
-            <div class="site-link-title">
-              <span>DC COMICS</span>
-              <ul>
-                <li v-for="comic in dcComics">
-                  <a :href="comic.url">{{ comic.text }}</a>
-                </li>
-              </ul>
-            </div>
-            <div class="site-link-title">
-              <span>SHOP</span>
-              <ul>
-                <li v-for="shop in shops">
-                  <a :href="shop.url">{{ shop.text }}</a>
-                </li>
-              </ul>
-            </div>
+        <div class="link-lists">
+          <div class="col-list">
+            <!-- DC links -->
+            <span class="list-title">DC COMICS</span>
+            <ul>
+              <li v-for="comic in dcComics">
+                <a :href="comic.url">{{ comic.text }}</a>
+              </li>
+            </ul>
+            <!-- Shop links -->
+            <span class="list-title">SHOP</span>
+            <ul>
+              <li v-for="shop in shops">
+                <a :href="shop.url">{{ shop.text }}</a>
+              </li>
+            </ul>
           </div>
-          <div class="col-2-link">
-            <div class="site-link-title">
-              <span>DC</span>
-              <ul>
-                <li v-for="dc in dcs">
-                  <a :href="dc.url">{{ dc.text }}</a>
-                </li>
-              </ul>
-            </div>
+          <!-- DC links -->
+          <div class="col-list">
+            <span class="list-title">DC</span>
+            <ul>
+              <li v-for="dc in dcs">
+                <a :href="dc.url">{{ dc.text }}</a>
+              </li>
+            </ul>
           </div>
-          <div class="col-2-link">
-            <div class="site-link-title">
-              <span>SITES</span>
-              <ul>
-                <li v-for="site in sites">
-                  <a :href="site.url">{{ site.text }}</a>
-                </li>
-              </ul>
-            </div>
+          <!-- Sites links -->
+          <div class="col-list">
+            <span class="list-title">SITES</span>
+            <ul>
+              <li v-for="site in sites">
+                <a :href="site.url">{{ site.text }}</a>
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="logo-big">
+        <!-- Big Logo -->
+        <div class="big-logo">
           <img src="/img/dc-logo-bg.png" alt="big logo" />
         </div>
       </div>
     </div>
+    <!-- Footer Social -->
     <div class="footer-social">
       <div class="container">
+        <!-- Sign Up Button -->
         <div class="footer-sign-up">
           <button>SIGN-UP NOW!</button>
         </div>
+        <!-- Social Links -->
         <div class="footer-social-links">
           <div><span class="social-claim">FOLLOW US</span></div>
           <ul>
@@ -144,42 +144,42 @@ export default {
 <style lang="scss" scoped>
 @use "../styles/general.scss" as *;
 
-.footer-site-links {
+// FOOTER SITE INDEX
+// Background image
+.footer-site-index {
   background-image: url(img/footer-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 300px;
   display: flex;
 
-  .site-links-lists {
+  // Link lists
+  .link-lists {
     display: flex;
-    .col-1-link {
+    .col-list {
       display: flex;
       flex-direction: column;
       margin-right: 1rem;
     }
-    .col-2-link {
-      margin-right: 1rem;
-    }
-
-    .site-link-title {
+    .list-title {
       color: white;
-      margin-top: 1rem;
     }
     ul {
-      margin-right: 1rem;
-      margin-top: 0.7rem;
-      margin-bottom: 0.7rem;
+      margin-right: 0.8rem;
+      margin-top: 0.8rem;
+      margin-bottom: 0.8rem;
       color: white;
       list-style-type: none;
-      font-size: 12px;
+      font-size: 11px;
       li {
         color: rgb(162, 162, 162);
         padding: 0.1rem 0;
       }
     }
   }
-  .logo-big {
+
+  // Big Logo
+  .big-logo {
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -191,6 +191,8 @@ export default {
     }
   }
 }
+
+// Footer Social
 .footer-social {
   background-color: #303030;
   .footer-sign-up {
