@@ -31,6 +31,43 @@ export default {
           url: "#",
         },
       ],
+
+      dcComics: [
+        { text: "Characters", url: "#" },
+        { text: "Comics", url: "#" },
+        { text: "Movies", url: "#" },
+        { text: "TV", url: "#" },
+        { text: "Games", url: "#" },
+        { text: "Videos", url: "#" },
+        { text: "News", url: "#" },
+      ],
+
+      shops: [
+        { text: "Shop DC", url: "#" },
+        { text: "Shop DC Collectibles", url: "#" },
+      ],
+
+      dcs: [
+        { text: "Terms Of Use", url: "#" },
+        { text: "Privacy policy(New)", url: "#" },
+        { text: "Ad Choices", url: "#" },
+        { text: "Advertising", url: "#" },
+        { text: "Jobs", url: "#" },
+        { text: "Subscriptions", url: "#" },
+        { text: "Talent Workshops", url: "#" },
+        { text: "CPSC Certificates", url: "#" },
+        { text: "Ratings", url: "#" },
+        { text: "Shop Help", url: "#" },
+        { text: "Contact Us", url: "#" },
+      ],
+
+      sites: [
+        { text: "DC", url: "#" },
+        { text: "MAD Magazine", url: "#" },
+        { text: "DC Kids", url: "#" },
+        { text: "DC Universe", url: "#" },
+        { text: "DC Power Visa", url: "#" },
+      ],
     };
   },
 };
@@ -39,24 +76,53 @@ export default {
   <footer>
     <div></div>
     <div class="footer-site-links">
-      <div class="container debug">
-        <div class="site-links-list debug">
-          <ul>
-            li*3
-          </ul>
-          <ul>
-            li*3
-          </ul>
-          <ul>
-            li*3
-          </ul>
+      <div class="container">
+        <div class="site-links-lists">
+          <div class="col-1-link">
+            <div class="site-link-title">
+              <span>DC COMICS</span>
+              <ul>
+                <li v-for="comic in dcComics">
+                  <a :href="comic.url">{{ comic.text }}</a>
+                </li>
+              </ul>
+            </div>
+            <div class="site-link-title">
+              <span>SHOP</span>
+              <ul>
+                <li v-for="shop in shops">
+                  <a :href="shop.url">{{ shop.text }}</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-2-link">
+            <div class="site-link-title">
+              <span>DC</span>
+              <ul>
+                <li v-for="dc in dcs">
+                  <a :href="dc.url">{{ dc.text }}</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-2-link">
+            <div class="site-link-title">
+              <span>SITES</span>
+              <ul>
+                <li v-for="site in sites">
+                  <a :href="site.url">{{ site.text }}</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
         <div class="logo-big">
           <img src="/img/dc-logo-bg.png" alt="big logo" />
         </div>
       </div>
     </div>
-    <div class="footer-social debug">
+    <div class="footer-social">
       <div class="container">
         <div class="footer-sign-up">
           <button>SIGN-UP NOW!</button>
@@ -83,9 +149,35 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   height: 300px;
+  display: flex;
 
-  .footer-site-links {
+  .site-links-lists {
     display: flex;
+    .col-1-link {
+      display: flex;
+      flex-direction: column;
+      margin-right: 1rem;
+    }
+    .col-2-link {
+      margin-right: 1rem;
+    }
+
+    .site-link-title {
+      color: white;
+      margin-top: 1rem;
+    }
+    ul {
+      margin-right: 1rem;
+      margin-top: 0.7rem;
+      margin-bottom: 0.7rem;
+      color: white;
+      list-style-type: none;
+      font-size: 12px;
+      li {
+        color: rgb(162, 162, 162);
+        padding: 0.1rem 0;
+      }
+    }
   }
   .logo-big {
     overflow: hidden;
@@ -117,6 +209,7 @@ export default {
     color: white;
     display: flex;
     align-items: center;
+
     ul {
       display: flex;
       list-style-type: none;
