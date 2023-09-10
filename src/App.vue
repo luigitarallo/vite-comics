@@ -1,22 +1,18 @@
 <script>
 import AppHeader from "./components/AppHeader.vue";
-import AppMain from "./components/AppMain.vue";
 import AppFooter from "./components/AppFooter.vue";
 export default {
-  components: { AppHeader, AppMain, AppFooter },
+  components: { AppHeader, AppFooter },
 };
 </script>
 
 <template>
-  <div class="wrapper">
-    <nav class="debug">
-      <div class="container debug">
-        <AppHeader />
-      </div>
-    </nav>
-  </div>
+  <AppHeader />
+  <AppFooter />
 </template>
 
 <style lang="scss">
-@use "./styles/general.scss" as *;
+@use "./styles/general.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin&family=Open+Sans:wght@500&display=swap");
 </style>
