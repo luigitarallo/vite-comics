@@ -12,16 +12,15 @@ a {
   color: inherit;
 }
 
-.debug {
-  border: 1px dotted red;
-  height: 100%;
-}
+// .debug {
+//   border: 1px dotted red;
+//   height: 100%;
+// }
 
 // UTILS
 
 .container {
   width: 70%;
-  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;

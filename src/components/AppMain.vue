@@ -3,7 +3,7 @@ export default {};
 </script>
 <template>
   <main>
-    <div class="container debug">
+    <div class="container">
       <p>--Contents goes here!--</p>
     </div>
   </main>
@@ -12,9 +12,11 @@ export default {};
 @use "../styles/general.scss" as *;
 main {
   background-color: #1c1c1c;
-  height: 100px;
   p {
     color: white;
+  }
+  .container {
+    height: 150px;
   }
 }
 </style>
