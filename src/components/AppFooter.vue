@@ -1,7 +1,37 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      sociaLinks: [
+        {
+          text: "facebook",
+          icon: "/img/footer-facebook.png",
+          url: "#",
+        },
+        {
+          text: "twitter",
+
+          icon: "/img/footer-twitter.png",
+          url: "#",
+        },
+        {
+          text: "youtube",
+          icon: "/img/footer-youtube.png",
+          url: "#",
+        },
+        {
+          text: "pinterest",
+
+          icon: "/img/footer-pinterest.png",
+          url: "#",
+        },
+        {
+          text: "periscope",
+          icon: "/img/footer-periscope.png",
+          url: "#",
+        },
+      ],
+    };
   },
 };
 </script>
@@ -32,13 +62,13 @@ export default {
           <button>SIGN-UP NOW!</button>
         </div>
         <div class="footer-social-links">
+          <div><span class="social-claim">FOLLOW US</span></div>
           <ul>
-            <li><span class="social-claim">FOLLOW US</span></li>
-            <li><img src="/img/footer-facebook.png" alt="" /></li>
-            <li><img src="/img/footer-twitter.png" alt="" /></li>
-            <li><img src="/img/footer-youtube.png" alt="" /></li>
-            <li><img src="/img/footer-pinterest.png" alt="" /></li>
-            <li><img src="/img/footer-periscope.png" alt="" /></li>
+            <li v-for="socialLink in sociaLinks">
+              <a :href="socialLink.url"
+                ><img :src="socialLink.icon" alt="facebook icon"
+              /></a>
+            </li>
           </ul>
         </div>
       </div>
@@ -85,6 +115,8 @@ export default {
   }
   .footer-social-links {
     color: white;
+    display: flex;
+    align-items: center;
     ul {
       display: flex;
       list-style-type: none;
@@ -92,10 +124,10 @@ export default {
       li {
         margin-left: 1rem;
       }
-      .social-claim {
-        color: #0c7cec;
-        font-weight: 600;
-      }
+    }
+    .social-claim {
+      color: #0c7cec;
+      font-weight: 600;
     }
   }
 }
