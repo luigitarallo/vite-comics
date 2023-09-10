@@ -61,29 +61,35 @@ export default {
 <template>
   <header>
     <div class="container">
+      <!-- Small Logo -->
       <div class="logo-small">
         <img src="img/dc-logo.png" alt="logo small" />
       </div>
-      <div>
+      <!-- Nav -->
+      <nav>
         <ul>
           <li v-for="link in links" :class="link.state ? 'link-selected' : ''">
             <a :href="link.url">{{ link.text }}</a>
           </li>
         </ul>
-      </div>
+      </nav>
     </div>
   </header>
 </template>
 <style lang="scss" scoped>
 @use "../styles/general.scss" as *;
+
+// HEADER
 header {
   background-color: white;
 }
+// Small Logo
 .logo-small {
   img {
     width: 5.5rem;
   }
 }
+// Navbar list
 ul {
   display: flex;
   list-style: none;
@@ -99,9 +105,5 @@ ul {
 .link-selected {
   color: #0c7cec;
   border-bottom: 5px solid #0c7cec;
-}
-a {
-  text-decoration: none;
-  color: inherit;
 }
 </style>
