@@ -159,18 +159,17 @@ export default {
     .col-list {
       display: flex;
       flex-direction: column;
-      margin-right: 1rem;
+      margin-right: 1.5rem;
     }
     .list-title {
       color: white;
+      font-size: 0.9rem;
     }
     ul {
-      margin-right: 0.8rem;
-      margin-top: 0.8rem;
-      margin-bottom: 0.8rem;
       color: white;
       list-style-type: none;
       font-size: 11px;
+      margin: 1rem 0;
       li {
         color: rgb(162, 162, 162);
         padding: 0.1rem 0;
