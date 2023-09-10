@@ -74,15 +74,15 @@ export default {
   li {
     display: flex;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1rem 3rem;
     .icon {
       display: flex;
       align-items: center;
       justify-content: center;
     }
     img {
-      height: 50px;
-      max-width: 50px;
+      height: 60px;
+      max-width: 60px;
     }
 
     .title {

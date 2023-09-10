@@ -18,6 +18,5 @@ export default {
 
 <style lang="scss">
 @use "./styles/general.scss";
-
 @import url("https://fonts.googleapis.com/css2?family=Libre+Franklin&family=Open+Sans:wght@500&display=swap");
 </style>
