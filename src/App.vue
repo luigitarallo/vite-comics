@@ -1,18 +1,18 @@
 <script>
 import AppHeader from "./components/AppHeader.vue";
 import AppMain from "./components/AppMain.vue";
-import AppBlueRaw from "./components/AppBlueRaw.vue";
+import AppBlueRow from "./components/AppBlueRow.vue";
 import AppFooter from "./components/AppFooter.vue";
 
 export default {
-  components: { AppHeader, AppMain, AppBlueRaw, AppFooter },
+  components: { AppHeader, AppMain, AppBlueRow, AppFooter },
 };
 </script>
 
 <template>
   <AppHeader />
   <AppMain />
-  <AppBlueRaw />
+  <AppBlueRow />
   <AppFooter />
 </template>
 

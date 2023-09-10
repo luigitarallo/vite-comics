@@ -143,6 +143,7 @@ export default {
 </template>
 <style lang="scss" scoped>
 @use "../styles/general.scss" as *;
+@use "../styles/partials/variables" as *;
 
 // FOOTER SITE INDEX
 // Background image
@@ -162,17 +163,16 @@ export default {
       margin-right: 1.5rem;
     }
     .list-title {
-      color: white;
+      color: $text-color;
       font-size: 0.9rem;
     }
     ul {
-      color: white;
       list-style-type: none;
-      font-size: 11px;
       margin: 1rem 0;
       li {
-        color: rgb(162, 162, 162);
+        color: $text-muted;
         padding: 0.1rem 0;
+        font-size: 11px;
       }
     }
   }
@@ -193,21 +193,21 @@ export default {
 
 // Footer Social
 .footer-social {
-  background-color: #303030;
+  background-color: $footer-bg;
   .footer-sign-up {
     margin: 1.5rem 0;
     padding: 0.8rem;
-    border: 2px solid #0c7cec;
+    border: 2px solid $brand-color;
 
     button {
       border-style: none;
-      background-color: #303030;
-      color: white;
+      background-color: $footer-bg;
+      color: $text-color;
       cursor: pointer;
     }
   }
   .footer-social-links {
-    color: white;
+    color: $text-color;
     display: flex;
     align-items: center;
 
@@ -220,7 +220,7 @@ export default {
       }
     }
     .social-claim {
-      color: #0c7cec;
+      color: $brand-color;
       font-weight: 600;
     }
   }

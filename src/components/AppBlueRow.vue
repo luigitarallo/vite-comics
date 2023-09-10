@@ -51,8 +51,9 @@ export default {
 </template>
 <style lang="scss" scoped>
 @use "../styles/general.scss" as *;
+@use "../styles/partials/variables" as *;
 .row {
-  background-color: #0c7cec;
+  background-color: $brand-color;
   height: 150px;
   .container-blue-row {
     width: 70%;
@@ -85,7 +86,7 @@ export default {
     }
 
     .title {
-      color: white;
+      color: $text-color;
       display: inline-block;
       margin-left: 1rem;
       font-size: 0.7rem;

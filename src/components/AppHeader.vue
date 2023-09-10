@@ -78,10 +78,11 @@ export default {
 </template>
 <style lang="scss" scoped>
 @use "../styles/general.scss" as *;
+@use "../styles/partials/variables" as *;
 
 // HEADER
 header {
-  background-color: white;
+  background-color: $text-color;
 }
 // Small Logo
 .logo-small {
@@ -103,7 +104,7 @@ ul {
 }
 
 .link-selected {
-  color: #0c7cec;
-  border-bottom: 5px solid #0c7cec;
+  color: $brand-color;
+  border-bottom: 5px solid $brand-color;
 }
 </style>
