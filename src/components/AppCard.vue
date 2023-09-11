@@ -5,14 +5,19 @@ export default {
 </script>
 <template>
   <section>
-    <div class="card-container">
-      <figure v-for="comic in comics" :key="comic.thumb">
-        <div class="card">
-          <img :src="comic.thumb" alt="" />
-        </div>
+    <div class="slider">
+      <div class="card-container">
+        <figure v-for="comic in comics" :key="comic.thumb">
+          <div class="card">
+            <img :src="comic.thumb" alt="" />
+          </div>
 
-        <figcaption>{{ comic.series }}</figcaption>
-      </figure>
+          <figcaption>{{ comic.series }}</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="button-container">
+      <button>LOAD MORE</button>
     </div>
   </section>
 </template>
@@ -21,10 +26,14 @@ export default {
 @use "../styles/partials/variables" as *;
 
 section {
+  display: flex;
+  flex-direction: column;
   background-color: $main-bg;
+  padding: 2rem 0;
+}
+.slider {
   display: flex;
   justify-content: center;
-  padding: 2rem 0;
 }
 
 .card-container {
@@ -52,6 +61,20 @@ figure {
     color: $text-color;
     font-size: 0.8rem;
     padding: 1rem 0;
+  }
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+
+  button {
+    margin-top: 1rem;
+    border-style: none;
+    padding: 0.5rem 3rem;
+    color: $text-color;
+    background-color: $brand-color;
+    cursor: pointer;
   }
 }
 </style>
