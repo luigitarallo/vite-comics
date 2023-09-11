@@ -3,7 +3,7 @@ export default {};
 </script>
 <template>
   <main>
-    <div class="container"></div>
+    <div class="series">CURRENT SERIES</div>
   </main>
 </template>
 <style lang="scss" scoped>
@@ -11,11 +11,16 @@ export default {};
 @use "../styles/partials/variables" as *;
 main {
   background-image: url(../../public/img/jumbotron.jpg);
-  p {
-    color: $text-color;
-  }
-  .container {
-    height: 400px;
-  }
+  height: 400px;
+  position: relative;
+}
+.series {
+  position: absolute;
+  background-color: $brand-color;
+  top: 94%;
+  left: 14%;
+  font-weight: 600;
+  color: $text-color;
+  padding: 0.8rem 2rem;
 }
 </style>
