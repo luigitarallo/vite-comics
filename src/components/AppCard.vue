@@ -1,5 +1,7 @@
 <script>
-export default {};
+export default {
+  props: { comics: Object },
+};
 </script>
 <template></template>
 <style></style>
