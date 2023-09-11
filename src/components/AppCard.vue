@@ -46,7 +46,8 @@ section {
   width: 70%;
 }
 .card {
-  height: 200px;
+  height: 180px;
+  width: 180px;
   overflow: hidden;
 }
 

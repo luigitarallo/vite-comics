@@ -19,8 +19,9 @@ main {
   background-color: $brand-color;
   top: 94%;
   left: 14%;
+  font-size: large;
   font-weight: 600;
   color: $text-color;
-  padding: 0.8rem 2rem;
+  padding: 0.8rem 3rem;
 }
 </style>
