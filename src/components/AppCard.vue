@@ -5,7 +5,7 @@ export default {
 </script>
 <template>
   <section>
-    <div class="slider">
+    <div class="card-gallery">
       <div class="card-container">
         <figure v-for="comic in comics" :key="comic.thumb">
           <div class="card">
@@ -25,13 +25,15 @@ export default {
 @use "../styles/general.scss" as *;
 @use "../styles/partials/variables" as *;
 
+// Section
 section {
   display: flex;
   flex-direction: column;
   background-color: $main-bg;
   padding: 2rem 0;
 }
-.slider {
+// Comics Card Gallery
+.card-gallery {
   display: flex;
   justify-content: center;
 }
@@ -63,6 +65,8 @@ figure {
     padding: 1rem 0;
   }
 }
+
+// Button load more
 
 .button-container {
   display: flex;
