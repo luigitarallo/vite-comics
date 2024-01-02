@@ -17,6 +17,18 @@
 - JavaScript
 - Vue.js
 
+## Istructions
+
+1. Open new terminal
+2. Run command 
+  ```
+  npm i
+  ```
+3. Run command
+  ```
+  npm run dev
+  ```
+
 ## ScreenShot
 
 ![Alt text](/public/img/dc-comics-screenshot.png)
